@@ -1,0 +1,5 @@
+[My Computer]
+My Computer = "192.168.1.7"
+
+[roboRIO-6520-FRC]
+roboRIO-6520-FRC = "192.168.1.11"

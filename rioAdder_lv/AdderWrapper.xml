@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- National Instruments recommends that you do not change this CLIP declaration file outside of the Configure Component-Level IP wizard. You can modify this declaration file on the Component-Level IP page of the FPGA Target Properties dialog box. -->
+
+
+
+<CLIPDeclaration Name="AdderWrapper">
+  <FormatVersion>4.3</FormatVersion>
+  <Description/>
+ 	<TopLevelEntityAndArchitecture>
+		  <SynthesisModel>
+			   <Entity>AdderWrapper</Entity>
+			   <Architecture>Behavioral</Architecture>
+		  </SynthesisModel>
+    <SimulationModel>
+		   <Entity>AdderWrapper</Entity>
+		   <Architecture>Behavioral</Architecture>
+</SimulationModel>
+ 	</TopLevelEntityAndArchitecture>
+  
+  <SupportedDeviceFamilies>Zynq
+</SupportedDeviceFamilies>
+  
+  <InterfaceList>
+    <Interface Name="LabVIEW">
+      <InterfaceType>LabVIEW</InterfaceType>
+      <SignalList>
+        <Signal Name="clk">
+          <HDLName>clk</HDLName>
+          <HDLType>STD_LOGIC</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>clock</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+  
+          <CyclesRequiredBeforeAsynchronousResetClears>0</CyclesRequiredBeforeAsynchronousResetClears>
+          <FreqInHertz>
+            <Max>200.000000M</Max>
+            <Min>1.000000M</Min>
+</FreqInHertz>
+
+</Signal>
+        <Signal Name="cEn">
+          <HDLName>cEn</HDLName>
+          <HDLType>STD_LOGIC</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="dataInA">
+          <HDLName>dataInA</HDLName>
+          <HDLType>STD_LOGIC_VECTOR (7 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>8</WordLength>
+              <IntegerWordLength>8</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="dataInB">
+          <HDLName>dataInB</HDLName>
+          <HDLType>STD_LOGIC_VECTOR (7 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>8</WordLength>
+              <IntegerWordLength>8</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="dataOut">
+          <HDLName>dataOut</HDLName>
+          <HDLType>STD_LOGIC_VECTOR (7 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>8</WordLength>
+              <IntegerWordLength>8</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+      </SignalList>
+    </Interface>
+    <Interface Name="Fabric">
+      <InterfaceType>Fabric</InterfaceType>
+      <SignalList>
+        <Signal Name="aReset">
+          <HDLName>aReset</HDLName>
+          <HDLType>STD_LOGIC</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>reset</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+  </Signal>
+  </SignalList>
+</Interface>
+  </InterfaceList>
+  <ImplementationList>
+    <Path Name="AdderWrapper.vhd">
+      <TopLevel/>
+      <MD5>fe1bea957699be5cd0387e42f300cf71</MD5>
+      <SimulationFileList>
+        <SimulationModelType>Same as synthesis</SimulationModelType>
+    </SimulationFileList>
+   
+</Path>
+    <Path Name="Adder.dcp">
+  
+      <MD5>3f39f3b000ff40140b3f337e96dd2c65</MD5>
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+    </SimulationFileList>
+   
+</Path>
+</ImplementationList>
+  <NumberOfDCMsNeeded>0</NumberOfDCMsNeeded>
+  <NumberOfMMCMsNeeded>0</NumberOfMMCMsNeeded>
+  <NumberOfBufGsNeeded>0</NumberOfBufGsNeeded>
+  
+
+
+</CLIPDeclaration>
